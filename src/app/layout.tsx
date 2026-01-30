@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const inter = Inter({
-  variable: '--font-sans',
+  variable: '--font-family',
   subsets: ['latin'],
   weight: ['400', '500', '700'],
 });
