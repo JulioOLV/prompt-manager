@@ -13,6 +13,9 @@ module.exports = {
   transform: {
     '^.+\.(ts|tsx)$': 'ts-jest', // Transform TypeScript files
   },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'], // Setup file for additional configurations
   collectCoverage: true, // Enable coverage collection
   coverageDirectory: '<rootDir>/coverage', // Coverage output directory
