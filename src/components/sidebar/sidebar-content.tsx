@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Logo } from '../logo';
 import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 
 export const SidebarContent = () => {
   const router = useRouter();
@@ -68,6 +69,17 @@ export const SidebarContent = () => {
                 </Button>
               </header>
             </div>
+
+            <section className="mb-5">
+              <form action="">
+                <Input
+                  name="query"
+                  placeholder="Buscar prompts..."
+                  type="text"
+                  autoFocus
+                />
+              </form>
+            </section>
 
             <div>
               <Button onClick={handleNewPrompt} className="w-full" size="lg">

@@ -55,6 +55,16 @@ describe('SidebarContent', () => {
 
       expect(collapseButton).not.toBeInTheDocument();
     });
+
+    it('should update the search input value when typing', async () => {
+      const text = 'AI';
+      makeSut();
+      const searchInput = screen.getByPlaceholderText('Buscar prompts...');
+
+      await user.type(searchInput, text);
+
+      expect(searchInput).toHaveValue(text);
+    });
   });
 
   describe('New Prompt', () => {
